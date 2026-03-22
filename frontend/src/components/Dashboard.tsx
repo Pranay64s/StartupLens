@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Activity, Target, AlertTriangle, CheckCircle, ArrowRight, Zap, Users, TrendingUp, DollarSign, Shield, BarChart3, PieChart as PieChartIcon, Layers, Lock, RefreshCw, Download, Home, ArrowLeft, Info, X, Search, BarChart2 } from 'lucide-react';
+import { Activity, Target, AlertTriangle, CheckCircle, ArrowRight, Zap, Users, TrendingUp, DollarSign, Shield, BarChart3, PieChart as PieChartIcon, Layers, Lock, RefreshCw, Download, Home, Info, X, Search, BarChart2 } from 'lucide-react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 
 const colors = {
@@ -451,7 +451,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onBack }) => {
                                                 dataKey="value"
                                                 stroke="none"
                                             >
-                                                {marketShareData.map((entry: any, index: number) => (
+                                                {marketShareData.map((_: any, index: number) => (
                                                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                                 ))}
                                             </Pie>
