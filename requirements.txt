@@ -1,6 +1,9 @@
 flask
 flask-cors
 google-generativeai
+google-adk
+google-genai
+google-generativeai
 duckduckgo-search
 fastapi
 uvicorn[standard]
