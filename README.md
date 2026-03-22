@@ -1,20 +1,11 @@
----
-title: Startup Lens API
-emoji: 🚀
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-pinned: false
----
-
 # 🚀 StartupLens
 
 **StartupLens** is a full-stack AI-powered application designed to analyze startup ideas, evaluate market sizes, research competitors, and learn from past startup failures using Retrieval-Augmented Generation (RAG).
 
 ## 🌍 Live Demos
 - **Frontend (UI)**: [StartupLens on Vercel](https://frontend-steel-eta-86.vercel.app/)
-- **Backend API**: [Hugging Face Space](https://pranay64-startup-lens-api.hf.space)
 
+---
 ---
 
 ## 🏗️ Architecture & Split Deployment
