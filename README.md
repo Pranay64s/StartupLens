@@ -12,8 +12,8 @@ pinned: false
 **StartupLens** is a full-stack AI-powered application designed to analyze startup ideas, evaluate market sizes, research competitors, and learn from past startup failures using Retrieval-Augmented Generation (RAG).
 
 ## 🌍 Live Demos
-- **Frontend (UI)**: [Deployed on Vercel](#) *(Add your Vercel URL here!)*
-- **Backend API**: [https://pranay64-startup-lens-api.hf.space](https://pranay64-startup-lens-api.hf.space)
+- **Frontend (UI)**: [StartupLens on Vercel](https://frontend-steel-eta-86.vercel.app/)
+- **Backend API**: [Hugging Face Space](https://pranay64-startup-lens-api.hf.space)
 
 ---
 
@@ -92,5 +92,5 @@ VITE_API_URL=http://127.0.0.1:7860
 npm run dev
 ```
 
----
-*Created and deployed by [Pranay64](https://github.com/Pranay64s)*
+
+
