@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "C:\Users\user\OneDrive\Desktop\FoundersLens\src\rag\retriever.py", line 31, in get_failed_startups_info
+  File "C:\Users\user\anaconda3\Lib\site-packages\langchain_huggingface\embeddings\huggingface.py", line 98, in __init__
+    self._client = model_cls(
+                   ^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\sentence_transformers\SentenceTransformer.py", line 327, in __init__
+    modules, self.module_kwargs = self._load_sbert_model(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\sentence_transformers\SentenceTransformer.py", line 2323, in _load_sbert_model
+    module = module_class.load(
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\sentence_transformers\models\Transformer.py", line 436, in load
+    return cls(model_name_or_path=model_name_or_path, **init_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\sentence_transformers\models\Transformer.py", line 121, in __init__
+    self._load_model(model_name_or_path, config, cache_dir, backend, is_peft_model, **model_args)
+  File "C:\Users\user\anaconda3\Lib\site-packages\sentence_transformers\models\Transformer.py", line 270, in _load_model
+    self.auto_model = AutoModel.from_pretrained(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\transformers\models\auto\auto_factory.py", line 374, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\transformers\modeling_utils.py", line 4137, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\transformers\modeling_utils.py", line 4256, in _load_pretrained_model
+    loading_info, disk_offload_index = convert_and_load_state_dict_in_model(
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\transformers\core_model_loading.py", line 1210, in convert_and_load_state_dict_in_model
+    for first_param_name, mapping in tqdm(param_name_to_load.items(), desc="Loading weights"):
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\transformers\utils\logging.py", line 378, in __call__
+    return tqdm_lib.tqdm(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\tqdm\asyncio.py", line 24, in __init__
+    super().__init__(iterable, *args, **kwargs)
+  File "C:\Users\user\anaconda3\Lib\site-packages\tqdm\std.py", line 1096, in __init__
+    self.sp = self.status_printer(self.fp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\site-packages\tqdm\std.py", line 448, in status_printer
+    getattr(sys.stderr, 'flush', lambda: None)()
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\OneDrive\Desktop\FoundersLens\src\server.py", line 225, in failed_startups
+    result = get_failed_startups_info(query, groq_api_key)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\OneDrive\Desktop\FoundersLens\src\rag\retriever.py", line 58, in get_failed_startups_info
+    "If the context is empty, simply use your own general LLM knowledge to provide 3 examples.\n"
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\anaconda3\Lib\traceback.py", line 180, in print_exc
+    print_exception(sys.exception(), limit=limit, file=file, chain=chain)
+  File "C:\Users\user\anaconda3\Lib\traceback.py", line 125, in print_exception
+    te.print(file=file, chain=chain)
+  File "C:\Users\user\anaconda3\Lib\traceback.py", line 1050, in print
+    print(line, file=file, end="")
+OSError: [Errno 22] Invalid argument

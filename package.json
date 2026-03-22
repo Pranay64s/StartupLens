@@ -1,0 +1,13 @@
+{
+  "name": "startuplens-root",
+  "version": "1.0.0",
+  "description": "Root runner for StartupLens",
+  "scripts": {
+    "dev:backend": "python -m src.server",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -c \"blue,green\" -n \"backend,frontend\" \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
