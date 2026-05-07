@@ -6,7 +6,6 @@
 - **Frontend (UI)**: [StartupLens on Vercel](https://frontend-steel-eta-86.vercel.app/)
 
 ---
----
 
 ## 🏗️ Architecture & Split Deployment
 
